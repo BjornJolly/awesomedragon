@@ -1,0 +1,25 @@
+import random
+
+def generate_cool_names(num_names):
+    """
+    Generates a list of random cool names.
+    
+    Args:
+        num_names (int): Number of names to generate.
+        
+    Returns:
+        A list of cool names.
+    """
+    cool_adjectives = ["Awesome", "Radical", "Epic", "Groovy", "Funky", "Slick", "Dope", "Chill", "Savage", "Lit"]
+    cool_nouns = ["Ninja", "Pirate", "Jedi", "Rockstar", "Hacker", "Wizard", "Samurai", "Warrior", "Viking", "Dragon"]
+    
+    cool_names = []
+    for i in range(num_names):
+        adj = random.choice(cool_adjectives)
+        noun = random.choice(cool_nouns)
+        cool_names.append(adj + " " + noun)
+        
+    return cool_names
+
+# Example usage
+print(generate_cool_names(5))
